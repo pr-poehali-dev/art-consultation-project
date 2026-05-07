@@ -8,11 +8,11 @@ const IMAGES = {
 };
 
 const QUOTES = [
-  { text: "Рисование — это искусство видеть. Научись видеть — и ты научишься рисовать.", author: "Микеланджело" },
-  { text: "Великий художник — это просто человек, который не оставил попыток.", author: "Поль Сезанн" },
-  { text: "В природе нет ничего некрасивого. Некрасивым может быть только взгляд на природу.", author: "Иван Шишкин" },
   { text: "Живопись — это поэзия, которую видят, а не слышат.", author: "Леонардо да Винчи" },
+  { text: "Великий художник — это просто человек, который не оставил попыток.", author: "Поль Сезанн" },
+  { text: "Рисование — это искусство видеть. Научись видеть — и ты научишься рисовать.", author: "Микеланджело" },
   { text: "Не ищи совершенства — ищи правду. Правда всегда совершенна.", author: "Илья Репин" },
+  { text: "В природе нет ничего некрасивого. Некрасивым может быть только взгляд на природу.", author: "Иван Шишкин" },
 ];
 
 const SERVICES = [
@@ -24,9 +24,9 @@ const SERVICES = [
 
 const SUCCESSES = [
   { name: "Анна К.", year: "2024", result: "РХУ им. Грекова", score: "98 баллов" },
-  { name: "Максим Р.", year: "2024", result: "ХГФ Пед. института", score: "Принят" },
+  { name: "Максим Р.", year: "2024", result: "ЮФУ(РГПУ) ХГФ", score: "Принят" },
   { name: "Дарья С.", year: "2023", result: "РХУ им. Грекова", score: "95 баллов" },
-  { name: "Артём В.", year: "2023", result: "ХГФ Пед. института", score: "Принят" },
+  { name: "Артём В.", year: "2023", result: "ЮФУ(РГПУ) ХГФ", score: "Принят" },
   { name: "Елена М.", year: "2022", result: "РХУ им. Грекова", score: "97 баллов" },
   { name: "Никита П.", year: "2022", result: "РХУ им. Грекова", score: "Принят" },
 ];
@@ -148,9 +148,9 @@ export default function Index() {
               начинается здесь
             </h1>
             <p className="font-ibm text-graphite text-base md:text-lg leading-relaxed mb-10 max-w-md font-light">
-              Профессиональная подготовка к вступительным испытаниям в&nbsp;
-              <span className="text-ink font-medium">РХУ им.&nbsp;Грекова</span> и&nbsp;
-              <span className="text-ink font-medium">ХГФ Пед.&nbsp;института</span>.
+              Профессиональная подготовка к поступлению в&nbsp;
+              <span className="text-ink font-medium">РХУ им.&nbsp;Грекова</span> и в&nbsp;
+              <span className="text-ink font-medium">ЮФУ (РГПУ)</span> на Художественно-графический факультет.
               Консультации и подкурсы по рисунку, живописи, композиции и скульптуре.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -271,7 +271,7 @@ export default function Index() {
             </div>
             <div className="mt-10 p-6 border-l-4 border-ochre bg-ink/5">
               <p className="font-cormorant text-xl text-graphite italic leading-relaxed">
-                "Мои ученики поступают в РХУ им. Грекова и ХГФ уже более 15 лет.
+                "Мои ученики поступают в РХУ им. Грекова и ЮФУ (РГПУ) ХГФ уже более 15 лет.
                 Каждый из них начинал с нуля — и находил свой путь в искусстве."
               </p>
             </div>
@@ -295,7 +295,7 @@ export default function Index() {
               </h2>
               <div className="space-y-5 font-ibm text-paper/80 font-light leading-relaxed">
                 <p>Преподаватель рисунка и живописи с многолетним опытом подготовки абитуриентов к поступлению в ведущие художественные учебные заведения.</p>
-                <p>Работаю с РХУ им. М.&nbsp;Б.&nbsp;Грекова и Художественно-графическим факультетом Педагогического института — знаю требования программы изнутри.</p>
+                <p>Работаю с РХУ им. М.&nbsp;Б.&nbsp;Грекова и Художественно-графическим факультетом ЮФУ (РГПУ) — знаю требования программы изнутри.</p>
                 <p>Обучаю рисунку, живописи, композиции и скульптуре. Мой подход: дать реальную оценку уровня и конкретный путь к цели.</p>
               </div>
               <div className="mt-10 grid grid-cols-3 gap-6">
@@ -510,7 +510,7 @@ export default function Index() {
             <div>
               <h3 className="font-cormorant text-2xl font-light mb-4">Художественная<br />мастерская</h3>
               <p className="font-ibm text-paper/60 text-sm font-light leading-relaxed">
-                Подготовка к поступлению в РХУ им. Грекова и ХГФ Пед. института.
+                Подготовка к поступлению в РХУ им. Грекова и ЮФУ (РГПУ) на Художественно-графический факультет.
                 Рисунок, живопись, композиция, скульптура.
               </p>
             </div>
@@ -518,7 +518,7 @@ export default function Index() {
               <h4 className="font-ibm text-xs tracking-widest uppercase text-ochre mb-6">Учебные заведения</h4>
               <ul className="space-y-3 font-ibm text-sm text-paper/70 font-light">
                 <li>РХУ им. М. Б. Грекова</li>
-                <li>ХГФ Педагогического института</li>
+                <li>ЮФУ (РГПУ) — Художественно-графический факультет</li>
               </ul>
               <h4 className="font-ibm text-xs tracking-widest uppercase text-ochre mb-4 mt-8">Дисциплины</h4>
               <ul className="space-y-2 font-ibm text-sm text-paper/70 font-light">
