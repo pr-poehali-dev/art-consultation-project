@@ -130,10 +130,12 @@ export default function Index() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1410' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }} />
         <div className="absolute right-0 top-16 bottom-0 w-1/2 hidden lg:block overflow-hidden">
-          <img src={IMAGES.portrait} alt="Академический рисунок"
-            className="w-full h-full object-cover opacity-30 mix-blend-multiply"
-            style={{ filter: "sepia(60%) contrast(1.1)" }} />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/50 to-transparent" />
+          <div className="absolute inset-0" style={{ backgroundColor: "#f5e9c8" }} />
+          <img src="https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg"
+            alt="Академический рисунок карандашом"
+            className="w-full h-full object-cover opacity-40 mix-blend-multiply"
+            style={{ filter: "sepia(30%) contrast(1.05)" }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/60 to-transparent" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-0 lg:w-1/2 lg:mr-auto">
