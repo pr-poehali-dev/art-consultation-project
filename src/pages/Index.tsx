@@ -203,12 +203,21 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-ink/10">
             {SERVICES.map((s, i) => (
-              <div key={i} className="p-8 border-r border-b border-ink/10 last:border-r-0 hover:bg-paper transition-colors duration-300 group cursor-default">
-                <div className="mb-6 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
-                  <Icon name={s.icon as "Pencil"} size={32} />
+              <div key={i} className="p-8 border-r border-b border-ink/10 last:border-r-0 hover:bg-paper transition-colors duration-300 group cursor-default relative overflow-hidden"
+                style={i === 0 ? {
+                  backgroundImage: `url(https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg)`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                } : undefined}
+              >
+                {i === 0 && <div className="absolute inset-0 bg-paper/88 group-hover:bg-paper/80 transition-colors duration-300" />}
+                <div className="relative z-10">
+                  <div className="mb-6 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
+                    <Icon name={s.icon as "Pencil"} size={32} />
+                  </div>
+                  <h3 className="font-cormorant text-2xl font-medium text-ink mb-3">{s.title}</h3>
+                  <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
                 </div>
-                <h3 className="font-cormorant text-2xl font-medium text-ink mb-3">{s.title}</h3>
-                <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
               </div>
             ))}
           </div>
