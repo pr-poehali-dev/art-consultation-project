@@ -212,24 +212,53 @@ export default function Index() {
             <div className="h-px w-16 bg-ochre mx-auto mt-6" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-ink/10">
-            {SERVICES.map((s, i) => (
-              <div key={i} className="p-8 border-r border-b border-ink/10 last:border-r-0 hover:bg-paper transition-colors duration-300 group cursor-default relative overflow-hidden"
-                style={i === 0 ? {
-                  backgroundImage: `url(https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg)`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                } : undefined}
-              >
-                {i === 0 && <div className="absolute inset-0 bg-paper/88 group-hover:bg-paper/80 transition-colors duration-300" />}
-                <div className="relative z-10">
-                  <div className="mb-6 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
-                    <Icon name={s.icon as "Pencil"} size={32} />
-                  </div>
-                  <h3 className="font-cormorant text-2xl font-medium text-ink mb-3">{s.title}</h3>
-                  <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
+            {SERVICES.map((s, i) => {
+              const bgImages: Record<number, string> = {
+                0: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg",
+                1: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/5069bde5-4249-476c-a78f-78dfd0cd409a.jpeg",
+              };
+              const hasBg = i in bgImages;
+              return (
+                <div key={i} className="border-r border-b border-ink/10 last:border-r-0 hover:bg-paper transition-colors duration-300 group cursor-default relative overflow-hidden"
+                  style={hasBg ? { backgroundImage: `url(${bgImages[i]})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
+                >
+                  {hasBg && <div className="absolute inset-0 bg-paper/88 group-hover:bg-paper/80 transition-colors duration-300" />}
+
+                  {i === 1 ? (
+                    <div className="relative z-10 flex flex-col h-full">
+                      <div className="mx-4 mt-4 bg-white shadow-lg" style={{ padding: "10px 10px 36px 10px" }}>
+                        <img
+                          src={bgImages[1]}
+                          alt="Акварельный натюрморт"
+                          className="w-full block"
+                        />
+                        <div className="text-center pt-2">
+                          <p className="font-cormorant text-ink/70 text-xs leading-relaxed">
+                            Акварельный натюрморт<br />
+                            <span className="font-ibm font-light" style={{ fontSize: "10px", letterSpacing: "0.05em" }}>цвет · тон · колорит</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="p-6 pt-4">
+                        <div className="mb-3 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
+                          <Icon name={s.icon as "Pencil"} size={28} />
+                        </div>
+                        <h3 className="font-cormorant text-2xl font-medium text-ink mb-2">{s.title}</h3>
+                        <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="relative z-10 p-8">
+                      <div className="mb-6 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
+                        <Icon name={s.icon as "Pencil"} size={32} />
+                      </div>
+                      <h3 className="font-cormorant text-2xl font-medium text-ink mb-3">{s.title}</h3>
+                      <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
