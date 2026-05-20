@@ -22,7 +22,7 @@ export default {
 			fontFamily: {
 				cormorant: ['Cormorant Garamond', 'serif'],
 				cormorant2: ['Cormorant', 'serif'],
-				ibm: ['IBM Plex Sans', 'sans-serif'],
+				ibm: ['Special Elite', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

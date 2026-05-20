@@ -99,3 +99,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .font-ibm {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+  }
+}
