@@ -132,7 +132,7 @@ export default function Index() {
         <div className="absolute right-0 top-16 bottom-0 w-1/2 hidden lg:flex items-center justify-center">
           <div className="bg-white shadow-2xl" style={{ padding: "20px 20px 60px 20px", maxWidth: "460px", width: "90%" }}>
             <img
-              src="https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg"
+              src="https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/06d23be5-cf52-4bdb-b9ba-a2ed17870085.jpeg"
               alt="Академический рисунок карандашом"
               className="w-full block"
               style={{ display: "block" }}
