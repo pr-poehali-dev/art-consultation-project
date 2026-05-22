@@ -18,7 +18,7 @@ const QUOTES = [
 const SERVICES = [
   { icon: "Pencil", title: "Рисунок", desc: "Академический рисунок: натюрморт, гипсовая голова, фигура человека. Базовые принципы построения формы и светотени." },
   { icon: "Palette", title: "Живопись", desc: "Работа с цветом, тоном и колоритом. Техники акварели, гуаши и масляной живописи для вступительных испытаний." },
-  { icon: "Layers", title: "Композиция", desc: "Законы построения композиции, ритм, пропорции, равновесие. Декоративная и сюжетная композиция." },
+  { icon: "Layers", title: "Композиция", desc: "Законы построения композиции, ритм, пропорции, равновесие. Декоративная и сюжетная композиция.", image: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/86bd8e4a-2b12-493c-a411-4b9a3caddb29.jpg" },
   { icon: "Box", title: "Скульптура", desc: "Объёмно-пространственное мышление, работа с пластилином и глиной. Рельеф и круглая скульптура." },
 ];
 
@@ -216,6 +216,7 @@ export default function Index() {
               const bgImages: Record<number, string> = {
                 0: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/14860c27-7b58-43d7-ab21-281e06621973.jpeg",
                 1: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/5069bde5-4249-476c-a78f-78dfd0cd409a.jpeg",
+                2: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/bucket/86bd8e4a-2b12-493c-a411-4b9a3caddb29.jpg",
               };
               const hasBg = i in bgImages;
               return (
@@ -236,6 +237,29 @@ export default function Index() {
                           <p className="font-cormorant text-ink/70 text-xs leading-relaxed">
                             Акварельный натюрморт<br />
                             <span className="font-ibm font-light" style={{ fontSize: "10px", letterSpacing: "0.05em" }}>цвет · тон · колорит</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="p-6 pt-4">
+                        <div className="mb-3 text-ochre group-hover:scale-110 transition-transform duration-300 inline-block">
+                          <Icon name={s.icon as "Pencil"} size={28} />
+                        </div>
+                        <h3 className="font-cormorant text-2xl font-medium text-ink mb-2">{s.title}</h3>
+                        <p className="font-ibm text-graphite text-sm leading-relaxed font-light">{s.desc}</p>
+                      </div>
+                    </div>
+                  ) : i === 2 ? (
+                    <div className="relative z-10 flex flex-col h-full">
+                      <div className="mx-4 mt-4 bg-white shadow-lg" style={{ padding: "10px 10px 36px 10px" }}>
+                        <img
+                          src={bgImages[2]}
+                          alt="Казаки пишут письмо турецкому султану"
+                          className="w-full block"
+                        />
+                        <div className="text-center pt-2">
+                          <p className="font-cormorant text-ink/70 text-xs leading-relaxed">
+                            И. Репин, 1891<br />
+                            <span className="font-ibm font-light" style={{ fontSize: "10px", letterSpacing: "0.05em" }}>ритм · равновесие · замысел</span>
                           </p>
                         </div>
                       </div>
