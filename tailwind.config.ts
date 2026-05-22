@@ -20,8 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				cormorant: ['Cormorant Garamond', 'serif'],
-				cormorant2: ['Cormorant', 'serif'],
+				sans: ['Special Elite', 'serif'],
+				cormorant: ['Special Elite', 'serif'],
+				cormorant2: ['Special Elite', 'serif'],
 				ibm: ['Special Elite', 'serif'],
 			},
 			colors: {
