@@ -8,11 +8,11 @@ const IMAGES = {
 };
 
 const QUOTES = [
-  { text: "Живопись — это поэзия, которую видят, а не слышат.", author: "Леонардо да Винчи" },
-  { text: "Великий художник — это просто человек, который не оставил попыток.", author: "Поль Сезанн" },
-  { text: "Рисование — это искусство видеть. Научись видеть — и ты научишься рисовать.", author: "Микеланджело" },
-  { text: "Не ищи совершенства — ищи правду. Правда всегда совершенна.", author: "Илья Репин" },
-  { text: "В природе нет ничего некрасивого. Некрасивым может быть только взгляд на природу.", author: "Иван Шишкин" },
+  { text: "Живопись — это поэзия, которую видят, а не слышат.", author: "Леонардо да Винчи", portrait: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/files/f343ea4b-8f5c-43da-8715-f17c07dc2639.jpg" },
+  { text: "Великий художник — это просто человек, который не оставил попыток.", author: "Поль Сезанн", portrait: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/files/8f157e68-3741-48cf-bd57-f54e11aed1b6.jpg" },
+  { text: "Рисование — это искусство видеть. Научись видеть — и ты научишься рисовать.", author: "Микеланджело", portrait: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/files/9d452119-0ddc-426e-8a91-95e582200257.jpg" },
+  { text: "Не ищи совершенства — ищи правду. Правда всегда совершенна.", author: "Илья Репин", portrait: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/files/2995d13d-4710-43ac-8216-6f152b2e5d0d.jpg" },
+  { text: "В природе нет ничего некрасивого. Некрасивым может быть только взгляд на природу.", author: "Иван Шишкин", portrait: "https://cdn.poehali.dev/projects/c8970861-38cc-43fa-8c71-e5e30e83b9d0/files/82046a8a-e343-4435-a473-fac4cbaab059.jpg" },
 ];
 
 const SERVICES = [
@@ -191,9 +191,19 @@ export default function Index() {
           <blockquote className="font-cormorant text-3xl md:text-4xl text-paper font-light italic leading-relaxed mb-8">
             {QUOTES[quoteIdx].text}
           </blockquote>
-          <cite className="text-ochre font-ibm text-sm tracking-widest uppercase not-italic block mb-10">
-            — {QUOTES[quoteIdx].author}
-          </cite>
+          <div className="flex items-center justify-center gap-4 mb-10">
+            {QUOTES[quoteIdx].portrait && (
+              <img
+                src={QUOTES[quoteIdx].portrait}
+                alt={QUOTES[quoteIdx].author}
+                className="w-14 h-14 rounded-full object-cover border-2 border-ochre/60 sepia"
+                style={{ filter: "sepia(60%) contrast(1.1)" }}
+              />
+            )}
+            <cite className="text-ochre font-ibm text-sm tracking-widest uppercase not-italic">
+              — {QUOTES[quoteIdx].author}
+            </cite>
+          </div>
           <div className="flex justify-center gap-2">
             {QUOTES.map((_, i) => (
               <button key={i} onClick={() => setQuoteIdx(i)}
